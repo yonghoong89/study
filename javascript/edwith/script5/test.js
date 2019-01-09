@@ -46,6 +46,9 @@ function tabMenuEvent() {
 
         loadingEvent();
 
+        //lst_cate_li.classList.remove('on');
+        console.log(lst_cate_li.classList)
+
         if(value.tagName === "SPAN"){
             sendAjax("json.txt",value.parentNode.getAttribute('href').replace("#",""));
         }else if(value.tagName === "LI"){
