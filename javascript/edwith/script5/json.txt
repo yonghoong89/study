@@ -1,0 +1,42 @@
+[
+    {
+        "id" : "type1",
+        "title" : "대타이틀",
+        "price" : "30,000",
+        "small_title" : ["데이터음성서비스 소타이틀"],
+        "small_price" : ["20,000"],
+        "info_data" : ["3GB"],
+        "info_call" : ["3GB"],
+        "info_message" : ["50건"]
+    },
+    {
+        "id" : "type2",
+        "title" : "대타이틀222",
+        "price" : "30,000",
+        "small_title" : ["데이터음성서비스 소타이틀"],
+        "small_price" : ["20,000"],
+        "info_data" : ["3GB"],
+        "info_call" : ["3GB"],
+        "info_message" : ["50건"]
+    },
+    {
+        "id" : "type3",
+        "title" : "대타이틀333",
+        "price" : "30,000",
+        "small_title" : ["데이터음성서비스 소타이틀"],
+        "small_price" : ["20,000"],
+        "info_data" : ["3GB"],
+        "info_call" : ["3GB"],
+        "info_message" : ["50건"]
+    },
+    {
+        "id" : "type4",
+        "title" : "대타이틀444",
+        "price" : "30,000",
+        "small_title" : ["데이터음성서비스 소타이틀"],
+        "small_price" : ["20,000"],
+        "info_data" : ["3GB"],
+        "info_call" : ["3GB"],
+        "info_message" : ["50건"]
+    }
+]

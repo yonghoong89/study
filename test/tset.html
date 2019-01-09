@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title>test</title>
+<script type="text/javascript" src="http://script.gmkt.kr/mobile/js/jquery-1.7.1.min.js"></script>
+<style>
+.out_line{width:100px;height:100px;border:1px solid #0066cc}
+.out_line .gage{display:block;width:100%;background-color: #0066cc;height: 1%;}
+.out_line .gage span{display: block;overflow: hidden;width: 1px;height: 1px;;line-height: 9999px}
+</style>
+</head>
+<body>
+<div id="wrap">
+    <div class="out_line">
+        <span class="gage">
+            <span class="blind">게이지입니다.</span>
+        </span>
+    </div>
+</div>
+</body>
+<script>
+function gage(){
+    var o = $(".gage")
+    o.css("height", "5%"), setInterval(function(){
+        o.css("height", "10%")
+    },100);
+}
+gage();
+</script>
+</html>

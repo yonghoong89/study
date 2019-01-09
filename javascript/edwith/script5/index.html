@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>test</title>
+<link rel="stylesheet" href="http://script.gmarket.co.kr/pc/css/ko/common.css">
+<link rel="stylesheet" href="test.css">
+<script src="test.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <a href="#ktshop_detail_wrap" class="btn">요금제 자세히보기</a>
+    <div id="ktshop_detail_wrap" class="layer_viplarge layer_ktshop">
+        <div class="innerwrap">
+            <h4 class="tit_viplayer">요금제 전체보기</h4>
+            <ul class="lst_cate">
+            <li class="lst_item_normal on">
+                <a href="#type1"><span class="img sp_vipgroup_kt"></span>일반</a>
+            </li>
+            <li class="lst_item_children">
+                <a href="#type2"><span class="img sp_vipgroup_kt"></span>12세미만</a>
+            </li>
+            <li class="lst_item_youth">
+                <a href="#type3"><span class="img sp_vipgroup_kt"></span>12세~24세</a>
+            </li>
+            <li class="lst_item_old">
+                <a href="#type4"><span class="img sp_vipgroup_kt"></span>65세이상</a>
+            </li>
+            </ul>
+            <form action="">
+            <fieldset>
+            <legend>요금제 선택</legend>
+            <div id="detail_normal" class="cont detail_cont on">
+                <p class="description">모든 요금제에는 부가세가 포함되어 있습니다.</p>
+                <div class="option_bx">
+                    <p class="tit_area">
+                        <span class="tit">{title}</span><span class="price">월 <span class="num">{price}</span>원~</span><button type="button" class="btn_detail on"><span class="sp_vipgroup_kt">상세보기 열림</span></button>
+                    </p>
+                    <ul class="info_lst on">
+                    <li>
+                        <span class="tit">{title}</span><span class="price">월 <span class="num">{number}</span>원</span>
+                        <span class="txt">
+                            <span class="stit">데이터</span> {info1},<br><span class="stit">음성</span> {info2}, <span class="stit">문자</span> {info3}
+                        </span>
+                        <label for="ly_otp_charge1_1" class="lb_rdo">
+                            <input type="radio" class="sp_vipgroup inp_rdo" name="ly_otp_charge" id="ly_otp_charge1_1"><span class="sp_vipgroup_kt ico_rdo"></span>선택
+                        </label>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont detail_cont">
+                <p class="ico_loading">로딩중</p>
+            </div>
+            </fieldset>
+            </form>
+            <a href="#" class="bt_close"><span class="sp_vipgroup_kt">닫기</span></a>
+        </div>
+    </div>
+</div>
+<script id="tabcontent" type="my-template">
+<p class="tit_area">
+    <span class="tit">{title}</span><span class="price">월 <span class="num">{price}</span>원~</span><button type="button" class="btn_detail on"><span class="sp_vipgroup_kt">상세보기 열림</span></button>
+</p>
+<ul class="info_lst on">
+<li>
+    <span class="tit">{small_title}</span><span class="price">월 <span class="num">{small_price}</span>원</span>
+    <span class="txt">
+        <span class="stit">데이터</span> {info_data},<br><span class="stit">음성</span> {info_call}, <span class="stit">문자</span> {info_message}
+    </span>
+    <label for="ly_otp_charge1_1" class="lb_rdo">
+        <input type="radio" class="sp_vipgroup inp_rdo" name="ly_otp_charge" id="ly_otp_charge1_1"><span class="sp_vipgroup_kt ico_rdo"></span>선택
+    </label>
+</li>
+</ul>
+</script>
+</body>
+</html>
