@@ -46,8 +46,13 @@ function tabMenuEvent() {
 
         loadingEvent();
 
-        //lst_cate_li.classList.remove('on');
-        console.log(lst_cate_li.classList)
+        console.log(lst_cate_li[0].classList)
+        for(var i = 0; i<lst_cate_li.length; i++){
+            if(lst_cate_li[i].contains('on')){
+                console.log(1)
+                lst_cate_li[i].classList.remove('on');
+            }
+        }
 
         if(value.tagName === "SPAN"){
             sendAjax("json.txt",value.parentNode.getAttribute('href').replace("#",""));
