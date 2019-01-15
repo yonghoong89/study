@@ -48,4 +48,4 @@
 .layer_ktshop .detail_cont .option_bx .info_lst .ico_rdo{display:inline-block;position:relative;*top:-6px;width:12px;height:9px;margin:11px 2px 0 0;background-position:0 -150px;vertical-align:top}
 .layer_ktshop .detail_cont .option_bx .info_lst .lb_rdo.on{background-color:#2e8de5;color:#fff}
 .layer_ktshop .detail_cont .option_bx .info_lst .lb_rdo.on .ico_rdo{background-position:-14px -150px}
-.layer_ktshop .detail_cont .ico_loading{overflow:hidden;position:absolute;top:50%;left:50%;width:32px;height:32px;margin:-16px 0 0 -16px;background:url(//mockupdev.gmarket.co.kr/pc/images/ko/item/vip/ico_loading.gif) no-repeat;line-height:999px}
+.layer_ktshop .detail_cont .ico_loading{overflow:hidden;position:absolute;top:50%;left:50%;width:32px;height:32px;margin:-16px 0 0 -16px;background:url(http://pics.gmarket.co.kr/pc/ko/item/vip/ico_loading.gif) no-repeat;line-height:999px}
