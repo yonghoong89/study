@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import './Movie.css';
 
+
 class Movie extends Component {
-    render() {
+  static propType = {
+    title:React.PropTypes.string,
+    poster:React.PropTypes.string
+  }
+  render() {
       return (
         <div>
           <h1>{this.props.title}</h1>
