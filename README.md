@@ -1,6 +1,3 @@
-# study
-<h1>자바스크립트 스터디</h1>
-
 <h2>자바스크립트 기초1</h2>
 https://yonghoong89.github.io/study/javascript/hivelab_exam/index.html<br/>
 <h2>자바스크립트 기초2</h2>
