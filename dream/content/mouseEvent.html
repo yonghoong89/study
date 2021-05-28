@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>window.screen :  <span id="value1"></span></div>
+    <div>window.outer : <span id="value2"></span></div>
+    <div>window.inner : <span id="value3"></span></div>
+    <div>documentElement.clientWidth : <span id="value4"></span></div>
+    <script>
+
+        var handleNumber = () => {
+            const windowScreenWidth = window.screen.width;
+            const windowScreenHeight = window.screen.height;
+
+            const windowOuterWidth = window.outerWidth;
+            const windowOuterHeight = window.outerHeight;
+
+            const windowInnerWidth = window.innerWidth;
+            const windowInnerHeight = window.innerHeight;
+
+            const windowClientWidth = document.documentElement.clientWidth;
+            const windowClientHeight = document.documentElement.clientHeight;
+
+            document.getElementById('value1').innerHTML = `${windowScreenWidth},${windowScreenHeight}`
+            document.getElementById('value2').innerHTML = `${windowOuterWidth},${windowOuterHeight}`
+            document.getElementById('value3').innerHTML = `${windowInnerWidth},${windowInnerHeight}`
+            document.getElementById('value4').innerHTML = `${windowClientWidth},${windowClientHeight}`
+        }
+
+
+        window.addEventListener('resize', function(){
+            handleNumber();
+        });
+
+        window.addEventListener('load', function(){
+            handleNumber();
+        });
+    </script>
+</body>
+</html>
