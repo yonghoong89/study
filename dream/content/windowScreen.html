@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image__sample{width:700px;image-rendering:-webkit-optimize-contrast}
+    </style>
+</head>
+<body style="overflow-y:scroll">
+    <img class="image__sample" src="https://t1.daumcdn.net/cfile/tistory/24177D4C56F80D290F" alt="참고 이미지" />
+    <div>window.screen (디바이스, 윈도우크기) :  <span id="value1"></span></div>
+    <div>window.outer (브라우저 전체크기) : <span id="value2"></span></div>
+    <div>window.inner (스크린 스크롤영역 포함 크기) : <span id="value3"></span></div>
+    <div>documentElement.clientWidth (스크린 스크롤영역 스크롤영역 미포함) : <span id="value4"></span></div>
+    <script>
+
+        var handleNumber = () => {
+            const windowScreenWidth = window.screen.width;
+            const windowScreenHeight = window.screen.height;
+
+            const windowOuterWidth = window.outerWidth;
+            const windowOuterHeight = window.outerHeight;
+
+            const windowInnerWidth = window.innerWidth;
+            const windowInnerHeight = window.innerHeight;
+
+            const windowClientWidth = document.documentElement.clientWidth;
+            const windowClientHeight = document.documentElement.clientHeight;
+
+            document.getElementById('value1').innerHTML = `${windowScreenWidth}, ${windowScreenHeight}`
+            document.getElementById('value2').innerHTML = `${windowOuterWidth}, ${windowOuterHeight}`
+            document.getElementById('value3').innerHTML = `${windowInnerWidth}, ${windowInnerHeight}`
+            document.getElementById('value4').innerHTML = `${windowClientWidth}, ${windowClientHeight}`
+        }
+
+
+        window.addEventListener('resize', function(){
+            handleNumber();
+        });
+
+        window.addEventListener('load', function(){
+            handleNumber();
+        });
+    </script>
+</body>
+</html>

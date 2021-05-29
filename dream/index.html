@@ -5,15 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+*{margin:0;padding:0}
+ul,ol{list-style:none}
+button{-webkit-border-radius:0;border-radius:0;background-color:transparent;cursor:pointer}
+a,a:hover,a:active,a:focus{text-decoration:none}
+button{border:0 none;background-color:transparent;cursor:pointer}
+em,address{font-style:normal}
+table{border-collapse:collapse;border-spacing:0}
+iframe,fieldset,img{border:0 none}
+textarea{resize:none}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+img{vertical-align:top}
+hr{display:none}
+.box__content{padding:20px;}
+.text__title{font-size:24px;margin-bottom:20px;}
+.list__item{padding-left:10px}
+.list-item{position:relative;padding-left:10px;font-size:16px;color:#333;margin-bottom:10px}
+.list-item:before{content:'';position:absolute;top:50%;left:0;width:2px;height:2px;margin:-1px 0 0 -1px;background:#333;vertical-align:top}
+.list-item a{color:#333}    
+    </style>
 </head>
 <body>
-    <ul>
-        <li><a href="content/todolist.html">투두리스트(개선전)</a></li>
-        <li><a href="content/todolist-dev.html">투두리스트(개선후)</a></li>
-        <li><a href="content/mouseEvent.html">마우스좌표(개선전)</a></li>
-        <li><a href="content/mouseEvent-dev.html">마우스좌표(개선후)</a></li>
-        <li><a href="content/game.html">게임만들기(개선전)</a></li>
-        <li><a href="content/game-dev.html">게임만들기(개선후)</a></li>
-    </ul>
+    <div class="box__content">
+        <h1 class="text__title">자바스크립트 101 브라우저의 이해</h1>
+        <ul class="list__item">
+            <li class="list-item">
+                <a href="content/windowScreen.html">윈도우 스크린의 이해</a>
+            </li>
+            <li class="list-item">
+                <a href="content/mouseMove.html">마우스좌표(개선전)</a>
+                </li>
+            <li class="list-item">
+                <a href="content/mouseMove-dev.html">마우스좌표(개선후)</a>
+            </li>
+            <li class="list-item">
+                <a href="content/todolist.html">투두리스트(개선전)</a></li>
+            <li class="list-item">
+                <a href="content/todolist-dev.html">투두리스트(개선후)</a>
+            </li>
+            <li class="list-item">
+                <a href="content/game.html">게임만들기(개선전)</a></li>
+            <li class="list-item">
+                <a href="content/game-dev.html">게임만들기(개선후)</a>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>

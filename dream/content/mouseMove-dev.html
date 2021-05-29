@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html{height:100%;}
+        body{background-color:#000;height:100vh;margin:0;cursor:none}
+        .box__position{position: absolute;top:-25px;left:-25px;color:#fff;width:50px;height:50px;background-color:yellow}
+        .line1{width:100%;height:1px;background-color:#fff}
+        .line2{width:1px;height:100%;background-color:#fff}
+        .text__value{position: absolute;top:100%;left:100%;white-space: nowrap;}
+    </style>
+</head>
+<body>
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="box__position">
+        <div class="text__value"></div>
+    </div>
+    <script>
+        const poFUnc = (event) =>{
+            
+            const x = event.clientX;
+            const y = event.clientY;
+            const ElementTest = document.querySelector('.box__position');
+            const ElementValue = document.querySelector('.text__value');
+            const Elementline1 = document.querySelector('.line1');
+            const Elementline2 = document.querySelector('.line2');
+            
+            ElementValue.innerHTML = `x값: ${x} <br/> y값: ${y}`;
+            Elementline1.style.transform = `translateY(${y}px)`;
+            Elementline2.style.transform = `translateX(${x}px)`;
+            ElementTest.style.transform = `translate(${x}px,${y}px)`;
+        }
+        
+       window.addEventListener('mousemove', poFUnc)
+
+    </script>
+</body>
+</html>

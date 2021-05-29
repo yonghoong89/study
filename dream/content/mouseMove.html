@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{background-color:#000;cursor:none}
+        .box__position{position:fixed;color:#fff;width:50px;height:50px;margin:-25px 0 0 -25px;background-color:yellow}
+        .box__position:before{position:fixed;left:0;width:100%;height:1px;margin-top:25px;background-color:#fff;content: ''}
+        .box__position:after{position:fixed;top:0;width:1px;height:100%;margin-left:25px;background-color:#fff;content: ''}
+        .text__value{position: absolute;top: 50px;left: 50px;white-space: nowrap;}
+    </style>
+</head>
+<body>
+    <div class="box__position">
+        <span class="text__value"></span>
+    </div>
+    <script>
+        const poFUnc = (event) =>{
+            console.log(event)
+            const x = event.pageX;
+            const y = event.pageY;
+            const Element = document.querySelector('.box__position');
+            const ElementValue = document.querySelector('.text__value');
+            
+            ElementValue.innerHTML = `x값: ${x} <br/> y값: ${y}`;
+            Element.style.top = `${y}px`;
+            Element.style.left = `${x}px`;
+        }   
+        const Element = document.querySelector('.box__black');
+        
+       window.addEventListener('mousemove', poFUnc)
+
+       
+    </script>
+</body>
+</html>
