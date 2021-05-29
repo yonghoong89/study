@@ -106,36 +106,19 @@ hr{display:none}
     <script>
         
         //추가
+        let id = 0; //UUID
         const createItem = (textValue) =>{
             //li element
             const newListTag = document.createElement("li");
             newListTag.setAttribute('class','list-item')
-            //inner div
-            const itemInnerWrap = document.createElement("div");
-            itemInnerWrap.setAttribute('class','box__item-inner')
-            //삭제버튼
-            const newButton = document.createElement('button')
-            newButton.setAttribute('class','button__delete')
-            newButton.innerHTML = '삭제'
+            newListTag.setAttribute('data-id', id)
 
-            newListTag.addEventListener('click', (event)=>{
-                if(event.target.className =='button__delete'){
-                    newListTag.remove();
-                }
-            })
+            newListTag.innerHTML=`
+            <div class="box__item-inner"><span class="text__item">${textValue}</span><button class="button__delete" data-button-id=${id}>삭제</button></div>
+            `
+            id++;
 
-            //span (입력값)
-            const valueText = document.createElement('span')
-            valueText.setAttribute('class','text__item')
-            valueText.innerHTML = textValue
-
-            newListTag.appendChild(itemInnerWrap)
-            itemInnerWrap.appendChild(valueText)
-            itemInnerWrap.appendChild(newButton)
-
-            const itemElement = newListTag;
-
-            return itemElement
+            return newListTag
         }
 
         const onAdd = () =>{
@@ -157,6 +140,15 @@ hr{display:none}
         const addButton = document.querySelector('.button__add')
         addButton.addEventListener('click', () => {
             onAdd()
+        });
+        //컨테이너
+        const itemContent = document.querySelector('.box__content')
+        itemContent.addEventListener('click', (e) => {
+            const id = e.target.dataset.buttonId;
+            if (id) {
+                const toBeDel = document.querySelector(`.list-item[data-id="${id}"]`);
+                toBeDel.remove();
+            }
         });
         //엔터 시
         const inputEl = document.querySelector('#addText');
