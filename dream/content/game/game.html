@@ -38,11 +38,36 @@
                     <img src="img/bug.png" alt="벌레" >
                 </button>
             </div>
-            <div class="box__success">
-
+            <div class="box__audio">
+                <audio class="audio__background">
+                   <source src="sound/bg.mp3">
+                </audio>
+                <audio class="audio__bug">
+                    <source src="sound/bug_pull.mp3">
+                </audio>
+                <audio class="audio__carrot">
+                    <source src="sound/carrot_pull.mp3">
+                </audio>
+                <audio class="audio__win">
+                    <source src="sound/game_win.mp3">
+                </audio>
+                <audio class="audio__alert">
+                    <source src="sound/alert.wav">
+                </audio>
             </div>
-            <div class="box__fail">
-
+            <div class="box__layer box__success">
+                성공했어요!
+                REPLAY?
+                <button type="button" class="button__replay">리플레이</button>
+            </div>
+            <div class="box__layer box__fail">
+                실패했어요!
+                REPLAY?
+                <button type="button" class="button__replay">리플레이</button>
+            </div>
+            <div class="box__layer box__fail">
+                REPLAY?
+                <button type="button" class="button__replay">리플레이</button>
             </div>
         </div>
    </div>
