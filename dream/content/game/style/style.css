@@ -91,5 +91,40 @@ body{
 
 
 .box__layer{
-    position: absolute;
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+}
+.box__layer.box__layer--active{
+    display:block;
+}
+.box__layer .box__inner{
+    position:relative;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:300px;
+    height:300px;
+    border-radius:10px;
+    transform:translate(-50%,-50%);
+    background-color:#fff;
+}
+.box__layer .box__title{
+    padding:50px 0;
+    font-size:24px;
+    font-weight:bold;
+    text-align:center;
+}
+.box__layer .button__replay{
+    display:block;
+    width:100px;
+    height:50px;
+    margin:0 auto;
+    background-color:#333;
+    color:#fff;
+    line-height:50px;
 }
