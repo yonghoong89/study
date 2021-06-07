@@ -4,7 +4,7 @@ const carrotButton = document.querySelector('.button__carrot');
 const bugButton = document.querySelector('.button__bug');
 
 const targetBox = document.querySelector('.box__target');
-const replayButton = document.querySelector('.button__replay');
+const replayButton = document.querySelectorAll('.button__replay');
 
 //audio
 const audioBg = document.querySelector('.audio__background');
@@ -49,12 +49,12 @@ const stopTimer = () =>{
     playState = false;
 }
 
-const toggleButton = (e) =>{
-    if(e.target === playButton){
+const toggleButton = (changeButtonType) =>{
+    if(changeButtonType === 'stopButton'){
         playButton.classList.remove('button__play--active')
         stopButton.classList.add('button__stop--active')
     }
-    if(e.target === stopButton){
+    if(changeButtonType === 'playButton'){
         stopButton.classList.remove('button__stop--active')
         playButton.classList.add('button__play--active')
     }
@@ -91,18 +91,34 @@ const layerOpen = (layerClass) =>{
     //게임실패
     stopTimer();
     audioBg.pause();
+    audioBug.play();
+}
+
+const layerClosed = () =>{
+    const openLayer = document.querySelector(`.box__layer--active`)
+    openLayer.classList.remove('box__layer--active');
 }
 
 const replay = () =>{
     console.log('test')
+    layerClosed();
+    targetBox.innerHTML = '';
+    playState = true;
     timerNumber = 10;
+    carrotNumber = 10;
+    bugNumber = 7;
+    audioBg.play()
     onTimer();
+    toggleButton('stopButton');
+    createCarrot();
+    createBug();
+    carrotElement.innerText = timerNumber;
 }
 
 playButton.addEventListener('click', (e)=>{
     playState = true;
     onTimer();
-    toggleButton(e);
+    toggleButton('stopButton');
     audioBg.play()
     createCarrot();
     createBug();
@@ -113,15 +129,18 @@ stopButton.addEventListener('click', (e)=>{
     //게임실패
     stopTimer();
     audioBg.pause();
-    toggleButton(e);
+    toggleButton('playButton');
     layerOpen('replay')
     audioAlert.play()
 });
 
-replayButton.addEventListener('click', (e)=>{
-    //리플레이
-    replay()
-});
+for(let i = 0; i<replayButton.length; i++) {
+    replayButton[i].addEventListener('click', (e)=>{
+        replay()
+    });
+}
+
+
 
 targetBox.addEventListener('click', (e)=>{
     const id = e.target.dataset.id;
