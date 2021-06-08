@@ -62,10 +62,16 @@ const toggleButton = (changeButtonType) =>{
 
 const createCarrot = () =>{
     const carrotButtonMaxnumber = carrotNumber;
+
     for(let i=1; i<=carrotButtonMaxnumber;i++ ){
         const carrotButton = document.createElement("button");
+        const randomPositionTop = (targetBox.clientHeight-80) * Math.random() + 'px';
+        const randomPositionLeft = (targetBox.clientWidth-80) * Math.random() + 'px';
+
         carrotButton.setAttribute('class','button__target button__carrot')
         carrotButton.setAttribute('data-button-id',`carrot${i}`)
+        carrotButton.style.top = randomPositionTop
+        carrotButton.style.left = randomPositionLeft
         carrotButton.innerHTML = `
             <img src="img/carrot.png" alt="당근" data-id=carrot${i} >
         `
@@ -77,10 +83,15 @@ const createBug = () =>{
     const bugButtonMaxnumber = bugNumber;
     for(let i=1; i<=bugButtonMaxnumber;i++ ){
         const bugButton = document.createElement("button");
+        const randomPositionTop = (targetBox.clientHeight-80) * Math.random() + 'px';
+        const randomPositionLeft = (targetBox.clientWidth-80) * Math.random() + 'px';
+
         bugButton.setAttribute('class','button__target button__bug');
         bugButton.innerHTML = `
             <img src="img/bug.png" alt="벌레" data-id="bug">
         `
+        bugButton.style.top = randomPositionTop
+        bugButton.style.left = randomPositionLeft
         targetBox.appendChild(bugButton);
     }
 }
