@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0}
+        ul,ol{list-style:none}
+        button{-webkit-border-radius:0;border-radius:0;background-color:transparent;cursor:pointer}
+        a,a:hover,a:active,a:focus{text-decoration:none}
+        button{border:0 none;background-color:transparent;cursor:pointer}
+        em,address{font-style:normal}
+        table{border-collapse:collapse;border-spacing:0}
+        iframe,fieldset,img{border:0 none}
+        textarea{resize:none}
+        article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+        img{vertical-align:top}
+        hr{display:none}
+    </style>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+   <div class="section__content">
+        <div class="box__game-content">
+            <div class="box__play-control">
+                <button type="button" class="button__play button__play--active">시작</button>
+                <button type="button" class="button__stop">정지</button>
+            </div>
+            <div class="box__timer">time : <span class="text__number">00</span></div>
+            <div class="box__target-number">10</div>
+            <div class="box__target"></div>
+            <div class="box__layer">
+                <div class="box__inner">
+                    <button type="button" class="button__replay">리플레이</button>
+                </div>
+            </div>
+        </div>
+   </div>
+   <script type="module"  src="script/script.js"></script>
+</body>
+</html>

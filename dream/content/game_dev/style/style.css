@@ -1,0 +1,133 @@
+body{
+    height:100vh;
+    background-color:#000
+}
+.box__game-content{
+    border-radius:25px;
+    position: relative;
+    overflow:hidden;
+    background: url(../img/background.png) no-repeat 50% 0;
+    background-size:auto 100%;
+    width:1150px;
+    height:648px;
+    margin:0 auto;
+}
+.box__play-control{
+    position: absolute;
+    top:10px;
+    left:50%;
+    width:100px;
+    height:100px;
+    margin-left:-50px;
+    background-color:#fff;
+}
+.box__target{
+    position: absolute;
+    top:380px;
+    left:0;
+    width:100%;
+    bottom:0;
+}
+.box__target .button__target{
+    position:absolute;
+}
+.box__play-control .button__play{
+    display:none;
+    width:50px;
+    height:50px;
+    background-color:#333;
+    color:#fff;
+    margin:0 auto;
+    transform: translateY(50%)
+}
+.box__play-control .button__play--active{
+    display:block;
+}
+.box__play-control .button__stop{
+    display:none;
+    width:50px;
+    height:50px;
+    background-color:#333;
+    color:#fff;
+    margin:0 auto;
+    transform: translateY(50%)
+}
+.box__play-control .button__stop--active{
+    display:block;
+}
+.box__timer{
+    position: absolute;
+    top:125px;
+    left:50%;
+    width:150px;
+    height:50px;
+    margin-left:-75px;
+    background-color:#fff;
+    line-height:50px;
+    font-size:16px;
+    text-align: center;
+    border-radius: 5px;
+    border:1px solid #333;
+    color:#333;
+}
+
+.box__target-number{
+    position: absolute;
+    top:200px;
+    left:50%;
+    width:50px;
+    height:50px;
+    margin-left:-25px;
+    border-radius: 50%;
+    background-color:#333;
+    line-height:50px;
+    font-size:24px;
+    font-weight:bold;
+    text-align: center;
+    color:#fff;
+}
+
+.button__carrot:hover,
+.button__bug:hover{
+    transform:scale(1.1)
+}
+
+
+.box__layer{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+}
+.box__layer.box__layer--active{
+    display:block;
+}
+.box__layer .box__inner{
+    position:relative;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:300px;
+    height:300px;
+    border-radius:10px;
+    transform:translate(-50%,-50%);
+    background-color:#fff;
+}
+.box__layer .box__title{
+    padding:50px 0;
+    font-size:24px;
+    font-weight:bold;
+    text-align:center;
+}
+.box__layer .button__replay{
+    display:block;
+    width:100px;
+    height:50px;
+    margin:0 auto;
+    background-color:#333;
+    color:#fff;
+    line-height:50px;
+}
