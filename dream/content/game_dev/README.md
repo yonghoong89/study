@@ -1,10 +1,10 @@
 <h1>리팩토링</h1>
 
 <h2>1.반복적 사용함수 Class를 이용하여 분기처리</h2>
-field 클래스 생성
-popuo 클래스 생성
-sound 클래스 생성
-game 클래스 생성
+field 클래스 생성<br/>
+popup 클래스 생성<br/>
+sound 클래스 생성<br/>
+game 클래스 생성<br/>
 - as import 활용
 <h2>2. 빌더패턴이용</h2>
 
