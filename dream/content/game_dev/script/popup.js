@@ -19,16 +19,16 @@ export default class Popup{
         this.Popup.querySelector('.box__title').remove();
     }
     
-    showWithText(text){
+    showWithText(reason){
         this.Popup.classList.add('box__layer--active');
         const titleTag = document.createElement("div");
         titleTag.setAttribute('class','box__title')
         const sucessText = '성공했어요!'
         const failText = '실패했어요!'
 
-        if(text==='sucess'){
+        if(reason ==='sucess'){
             titleTag.innerText = sucessText
-        }else if(text==='fail'){
+        }else if(reason ==='fail'){
             titleTag.innerText = failText
         }
         this.PopupInner.appendChild(titleTag)
