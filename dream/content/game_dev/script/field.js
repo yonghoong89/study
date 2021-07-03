@@ -1,6 +1,11 @@
 'use strict';
 
-export default class Field{
+export const itemType = Object.freeze({
+    carrot : 'carrot',
+    bug : 'bug',
+});
+
+export class Field{
     constructor(carrotNumber,bugNumber){
         this.carrotNumber = carrotNumber
         this.bugNumber = bugNumber
@@ -15,19 +20,19 @@ export default class Field{
     }
     init(){
         this.fieldBox.innerHTML = '';
-        this._addItem('carrot')
-        this._addItem('bug')
+        this._addItem(itemType.carrot)
+        this._addItem(itemType.bug)
     }
     _addItem(addItemName){
         let itemName = '';
         let altText = '';
         let count = '';
-        if(addItemName==='carrot'){
-            itemName = 'carrot';
+        if(addItemName===itemType.carrot){
+            itemName = itemType.carrot;
             altText = '당근';
             count = this.carrotNumber;
-        }else if(addItemName==='bug'){
-            itemName = 'bug';
+        }else if(addItemName===itemType.bug){
+            itemName = itemType.bug;
             altText = '버그';
             count = this.bugNumber;
         }
