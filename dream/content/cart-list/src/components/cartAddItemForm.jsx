@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import React from 'react';
 
-class CartAddItemForm extends Component {
+class CartAddItemForm extends PureComponent {
     inputRef = React.createRef();
 
     onSubmit = event =>{

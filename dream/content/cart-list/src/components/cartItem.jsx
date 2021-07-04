@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class CartItem extends Component {
+class CartItem extends PureComponent {
     inputRef = React.createRef();
 
     handleIncrement = () =>{
