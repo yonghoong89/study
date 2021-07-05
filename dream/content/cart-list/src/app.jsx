@@ -16,20 +16,26 @@ class App extends Component {
   }
 
   handleIncrement = (item) =>{
-    //껍데기만 다를 뿐 스프레드신택스 복제 시 안에 레퍼런스 링크는 같음
-    const items = [...this.state.items]
-    const index = items.indexOf(item)
-    items[index].count++;
+    const items = this.state.items.map(itemArray=>{
+      if(itemArray.id === item.id){
+        console.log(1)
+        return {...item, count:item.count+1}
+      }
+      console.log(2)
+      return itemArray;
+    })
     this.setState({items: items})
   }
 
   handleDecrement = (item) =>{
-      console.log(item)
-      const items = [...this.state.items]
-      const index = items.indexOf(item)
-      const count =  items[index].count-1;
-      items[index].count = count < 0 ? 0 : count;
-      this.setState({items: items})
+    const items = this.state.items.map(itemArray=>{
+      if(itemArray.id === item.id){
+        const count = item.count -1;
+        return {...item, count:count < 0 ? 0 : count}
+      }
+      return itemArray;
+    })
+    this.setState({items: items})
   }
   handleChangeCount = (item, count) =>{
     const items = [...this.state.items]
@@ -48,7 +54,9 @@ class App extends Component {
   }
   handleAallDelete = () =>{
     const items = this.state.items.map(item => {
-      item.count = 0; 
+      if(item.count!==0){
+        return {...item, count:0}
+      }
       return item
     });
     this.setState({items: items})
